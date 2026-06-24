@@ -16,3 +16,95 @@
 
     </body>
 </html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>リンクボタンのサンプル</title>
+    <style>
+        /* 全体の見た目を整えるためのスタイル */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            margin: 0;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        /* ==========================================
+           パターン①: シンプルでモダンなボタン
+           ========================================== */
+        .btn-simple {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #3498db; /* ボタンの背景色（青） */
+            color: #ffffff;            /* 文字の色（白） */
+            text-decoration: none;     /* リンクの下線を消す */
+            border-radius: 5px;        /* 角を少し丸くする */
+            font-weight: bold;
+            transition: background-color 0.3s ease; /* マウスを乗せた時の変化を滑らかに */
+        }
+
+        /* マウスを乗せたとき（ホバー時）の動き */
+        .btn-simple:hover {
+            background-color: #2980b9; /* 少し濃い青色に変わる */
+        }
+
+
+        /* ==========================================
+           パターン②: アニメーション付きの立体ボタン
+           ========================================== */
+        .btn-3d {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #2ecc71; /* ボタンの背景色（緑） */
+            color: #ffffff;            /* 文字の色（白） */
+            text-decoration: none;     /* リンクの下線を消す */
+            border-radius: 5px;        /* 角を少し丸くする */
+            font-weight: bold;
+            box-shadow: 0 5px 0 #27ae60; /* ボタンの下に影をつけて立体感を出す */
+            transition: all 0.1s ease;
+        }
+
+        /* マウスを乗せたとき（ホバー時）の動き */
+        .btn-3d:hover {
+            background-color: #27ae60;
+            box-shadow: 0 4px 0 #219653;
+            transform: translateY(1px); /* 1ピクセル下に沈む */
+        }
+
+        /* ボタンをクリックした瞬間の動き */
+        .btn-3d:active {
+            box-shadow: none;           /* 影を消す */
+            transform: translateY(5px); /* 影の分だけ下に沈む（押した感覚が出る） */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="button-container">
+        <p>パターン①：シンプルなボタン</p>
+        <a href="https://ehm-saijo-ah.esnet.ed.jp/" class="btn-simple">Googleを開く</a>
+    </div>
+
+    <div class="button-container">
+        <p>パターン②：クリック感のある立体ボタン</p>
+        <a href="" class="btn-3d">Googleを開く</a>
+    </div>
+
+</body>
+</html>
